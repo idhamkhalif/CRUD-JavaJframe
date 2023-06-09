@@ -244,6 +244,7 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         btnShow = new javax.swing.JButton();
         Clear = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -329,6 +330,13 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -338,7 +346,8 @@ public class mainFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(162, 162, 162)
                         .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLogout))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -397,7 +406,9 @@ public class mainFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel3))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(btnLogout))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(inNim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -482,6 +493,13 @@ public class mainFrame extends javax.swing.JFrame {
         clearTxt();
     }//GEN-LAST:event_ClearActionPerformed
 
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
+        LoginPage lg = new LoginPage();
+        lg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnLogoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -523,6 +541,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnGetData;
     private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnShow;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JTextField inAlamat;
